@@ -1,5 +1,9 @@
 Project code - CBP21
-Project title - Speech to text onversion for all Indian regional languages
-Our aim is to help people who doesn't know any other regional language than theirs. Ou Text to speech model is deveoped using Python modules and it's frontend designs are developed using python's GUI module "Tkinter".
+Project title - Speech to text conversion for all Indian regional languages
+Our aim is to help people who doesn't know any other regional language than theirs.
+
+Our speech to text model is deveoped using Python modules like gTTS, Speech recognition, playsound and translator and it's frontend designs are developed using python's GUI module "Tkinter".
 This code converts 6 regional languages into english and then finally displays the content in English and also recites the converted content in English
+
+Advantages over other apps:
 This application has a new feature which common translation apps do not have. This application automatically recites the translated content. But other apps does not work like that. 
