@@ -1,0 +1,28 @@
+import speech_recognition as sr
+import sounddevice
+import pyaudio
+from playsound import playsound
+from gtts import gTTS
+
+from translate import Translator
+recognizer = sr.Recognizer()
+def record_audio(code_="hi"):
+    with sr.Microphone() as source:
+        audio = recognizer.record(source,duration=3)
+    recognize_speech(audio,code_)
+
+def translate_text(text, target_language='en'):
+    global translation
+    translator = Translator(from_lang="hi",to_lang=target_language)
+    translation = translator.translate(text)
+    return translation
+
+def recognize_speech(audio,code_):
+
+    text = recognizer.recognize_google(audio,language=code_)
+    print(translate_text(text,target_language='en'))
+record_audio()
+
+voice=gTTS(text=translation,lang="en")
+voice.save("voice.mp3")
+playsound("voice.mp3")
